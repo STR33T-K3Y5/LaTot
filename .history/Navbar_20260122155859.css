@@ -1,0 +1,133 @@
+/* --- Basic Navbar Setup --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #060b0d; /* Dark Azure */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 999;
+  transition: top 0.3s;
+}
+
+.navbar.hidden {
+  top: -100px; /* Hide when scrolling down */
+}
+
+.navbar.visible {
+  top: 0; /* Show when scrolling up */
+}
+
+/* --- Logo with Gradient --- */
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(90deg, #c59740, #a87920, #f6b63f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Nav links --- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  transition: all 0.3s;
+}
+
+/* Active underline gradient */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #c59740, #a87920, #f6b63f);
+  border-radius: 2px;
+}
+
+/* --- CTA Button --- */
+.nav-cta-btn a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  background: white;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.nav-cta-btn a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  padding: 2px;
+  background: linear-gradient(90deg, #c59740, #a87920, #f6b63f);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* --- Hamburger Menu --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #060b0d;
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

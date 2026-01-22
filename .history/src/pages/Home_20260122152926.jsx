@@ -223,7 +223,7 @@ const Home = () => {
         </div>
       </section> 
 
-      <section id="contact-section">
+      <section id="contc-section">
         <div class="contact-container">
           <h1 class="contact-header">Your Journey Begins Here</h1>
           <p class="contact-description">The LATOT multiverse is always expanding. Whether you're looking to join an existing world or create something entirely new, there's a place for you in our community.</p>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css'; // We'll create this
+import './Navbar'; // We'll create this
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);

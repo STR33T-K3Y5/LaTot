@@ -195,25 +195,25 @@ const Home = () => {
       </section>
 
       {/* LaTot Multiverse Section */}
-      <section id="multiverse-section">
-        <h1 class="multiverse-header">The LATOT Multiverse</h1>
-        <h2 class="multiverse-subheader">Infinite Worlds, One Community</h2>
-        <p class="multiverse-description">Where boundaries dissolve and possibilities expand. The LATOT multiverse connects talent, opportunity, and innovation across countless interconnected worlds.</p>
-        <div class="multiverse-carousel">
+      <section id="mu-section">
+        <h1 class="mu-header">The LATOT Multiverse</h1>
+        <h2 class="mu-subheader">Infinite Worlds, One Community</h2>
+        <p class="mu-description">Where boundaries dissolve and possibilities expand. The LATOT multiverse connects talent, opportunity, and innovation across countless interconnected worlds.</p>
+        <div class="mu-carousel">
           {/* Our Worlds */}
-            <h1 class="multiverse-header">Discover Our Worlds</h1>
-            <p class="multiverse-description">The LATOT multiverse is a tapestry of interconnected worlds, each offering unique opportunities, communities, and experiences for citizens from all walks of life.</p>
+            <h1 class="mu-header">Discover Our Worlds</h1>
+            <p class="mu-description">The LATOT multiverse is a tapestry of interconnected worlds, each offering unique opportunities, communities, and experiences for citizens from all walks of life.</p>
           {/* A Universe of Possibilities */}
-          <div class="multiverse-item">
-            <h1 class="multiverse-header">A Universe of Possibilities</h1>
-            <p class="multiverse-description">Every world in the LATOT multiverse is designed to foster growth, creativity, and collaboration. Whether you're a creator, innovator, or leader, there's a place for you here.</p>
-            <p class="multiverse-description">Cross-dimensional travel is seamless, allowing you to explore, connect, and contribute across all our worlds without barriers.</p>
+          <div class="mu-item">
+            <h1 class="mu-header">A Universe of Possibilities</h1>
+            <p class="mu-description">Every world in the LATOT multiverse is designed to foster growth, creativity, and collaboration. Whether you're a creator, innovator, or leader, there's a place for you here.</p>
+            <p class="mu-description">Cross-dimensional travel is seamless, allowing you to explore, connect, and contribute across all our worlds without barriers.</p>
           </div>
           {/* Collaboration Without Borders */}
-          <div class="multiverse-item">
-            <h1 class="multiverse-header">Collaboration Without Borders</h1>
-            <p class="multiverse-description">The LATOT multiverse was built on the belief that great things happen when talented individuals from different worlds come together.</p>
-            <p class="multiverse-description">Our collaborative platforms break down barriers, enabling seamless teamwork across sectors, planets, and dimensions. Whatever your vision, find the right partners to bring it to life.</p>
+          <div class="mu-item">
+            <h1 class="mu-header">Collaboration Without Borders</h1>
+            <p class="mu-description">The LATOT multiverse was built on the belief that great things happen when talented individuals from different worlds come together.</p>
+            <p class="mu-description">Our collaborative platforms break down barriers, enabling seamless teamwork across sectors, planets, and dimensions. Whatever your vision, find the right partners to bring it to life.</p>
             <ul class="tick-list">
               <li class="tick-item">Cross-dimensional project teams</li>
               <li class="tick-item">Shared resources and knowledge</li>
@@ -223,7 +223,7 @@ const Home = () => {
         </div>
       </section> 
 
-      <section id="contact-section">
+      <section id="join-section">
         <div class="contact-container">
           <h1 class="contact-header">Your Journey Begins Here</h1>
           <p class="contact-description">The LATOT multiverse is always expanding. Whether you're looking to join an existing world or create something entirely new, there's a place for you in our community.</p>
