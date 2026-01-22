@@ -59,7 +59,7 @@ const Navbar = () => {
 
       {/* CTA Button */}
       <button className="cta-button">
-        <a href="mailto:info@latotofficial.com">Join</a>
+        <a href="mailto:info@exampl.com">Join</a>
       </button>
 
       {/* Hamburger */}

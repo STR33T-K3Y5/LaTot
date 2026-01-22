@@ -53,13 +53,13 @@ const Navbar = () => {
           </a>
         ))}
         <button className="mobile-cta" onClick={() => setMenuOpen(false)}>
-          <a href="mailto:info@latotofficial.com">Join</a>
+          <a href="mailto:info@latot.com">Join</a>
         </button>
       </div>
 
       {/* CTA Button */}
       <button className="cta-button">
-        <a href="mailto:info@latotofficial.com">Join</a>
+        <a href="mailto:info@example.com">Join</a>
       </button>
 
       {/* Hamburger */}

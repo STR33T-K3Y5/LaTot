@@ -227,7 +227,7 @@ const Home = () => {
         <div className="contact-container">
           <h1 className="contact-header">Your Journey Begins Here</h1>
           <p className="contact-description">The LATOT multiverse is always expanding. Whether you're looking to join an existing world or create something entirely new, there's a place for you in our community.</p>
-          <button className="contact-cta-button">
+          <button class="contact-cta-button">
             <a href="mailto:info@latotofficial.com">Become A Citizen</a>
           </button>
         </div>
@@ -238,4 +238,3 @@ const Home = () => {
 }
 
 export default Home
-

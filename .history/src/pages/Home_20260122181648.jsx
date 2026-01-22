@@ -211,23 +211,23 @@ const Home = () => {
           </div>
           {/* Collaboration Without Borders */}
           <div className="multiverse-item">
-            <h1 className="multiverse-header">Collaboration Without Borders</h1>
-            <p className="multiverse-description">The LATOT multiverse was built on the belief that great things happen when talented individuals from different worlds come together.</p>
-            <p className="multiverse-description">Our collaborative platforms break down barriers, enabling seamless teamwork across sectors, planets, and dimensions. Whatever your vision, find the right partners to bring it to life.</p>
-            <ul className="tick-list">
-              <li className="tick-item">Cross-dimensional project teams</li>
-              <li className="tick-item">Shared resources and knowledge</li>
-              <li className="tick-item">Global networking opportunities</li>
+            <h1 class="multiverse-header">Collaboration Without Borders</h1>
+            <p class="multiverse-description">The LATOT multiverse was built on the belief that great things happen when talented individuals from different worlds come together.</p>
+            <p class="multiverse-description">Our collaborative platforms break down barriers, enabling seamless teamwork across sectors, planets, and dimensions. Whatever your vision, find the right partners to bring it to life.</p>
+            <ul class="tick-list">
+              <li class="tick-item">Cross-dimensional project teams</li>
+              <li class="tick-item">Shared resources and knowledge</li>
+              <li class="tick-item">Global networking opportunities</li>
             </ul>
           </div>
         </div>
       </section> 
 
       <section id="contact-section">
-        <div className="contact-container">
-          <h1 className="contact-header">Your Journey Begins Here</h1>
-          <p className="contact-description">The LATOT multiverse is always expanding. Whether you're looking to join an existing world or create something entirely new, there's a place for you in our community.</p>
-          <button className="contact-cta-button">
+        <div class="contact-container">
+          <h1 class="contact-header">Your Journey Begins Here</h1>
+          <p class="contact-description">The LATOT multiverse is always expanding. Whether you're looking to join an existing world or create something entirely new, there's a place for you in our community.</p>
+          <button class="contact-cta-button">
             <a href="mailto:info@latotofficial.com">Become A Citizen</a>
           </button>
         </div>
@@ -238,4 +238,3 @@ const Home = () => {
 }
 
 export default Home
-

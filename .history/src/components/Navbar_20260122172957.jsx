@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css'; 
+import './Navbar.css'; // We'll create this
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -8,6 +8,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
+
+  // Close menu when a link is clicked
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   // Hide on scroll down, show on scroll up
   useEffect(() => {
@@ -43,23 +48,22 @@ const Navbar = () => {
         <Link
           to="/findtalent"
           className={location.pathname === '/findtalent' ? 'active' : ''}
-          onClick={() => setMenuOpen(false)}
         >
           Find Talent
         </Link>
         {navLinks.map((link) => (
-          <a key={link.name} href={link.to} onClick={() => setMenuOpen(false)}>
+          <a key={link.name} href={link.to}>
             {link.name}
           </a>
         ))}
-        <button className="mobile-cta" onClick={() => setMenuOpen(false)}>
-          <a href="mailto:info@latotofficial.com">Join</a>
+        <button className="mobile-cta">
+          <a href="mailto:info@example.com">Join</a>
         </button>
       </div>
 
       {/* CTA Button */}
       <button className="cta-button">
-        <a href="mailto:info@latotofficial.com">Join</a>
+        <a href="mailto:info@example.com">Join</a>
       </button>
 
       {/* Hamburger */}
