@@ -51,10 +51,10 @@ const Navbar = () => {
             {link.name}
           </a>
         ))}
-        <button className="nav-cta-btn">
-            <a href="mailto:info@example.com">Join</a>
-        </button>
+
+        
       </div>
+
 
       {/* Hamburger */}
       <div

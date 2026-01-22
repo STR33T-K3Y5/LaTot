@@ -50,11 +50,12 @@ const Navbar = () => {
           <a key={link.name} href={link.to}>
             {link.name}
           </a>
-        ))}
-        <button className="nav-cta-btn">
-            <a href="mailto:info@example.com">Join</a>
-        </button>
+        ))}<button className="nav-cta-btn">
+        <a href="mailto:info@example.com">Join</a>
+      </button>
+
       </div>
+
 
       {/* Hamburger */}
       <div

@@ -53,8 +53,10 @@ const Navbar = () => {
         ))}
         <button className="nav-cta-btn">
             <a href="mailto:info@example.com">Join</a>
-        </button>
+       </button>
+
       </div>
+
 
       {/* Hamburger */}
       <div
