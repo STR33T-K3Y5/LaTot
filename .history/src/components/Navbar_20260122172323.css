@@ -1,0 +1,27 @@
+/* ============================================
+   Navbar Styles - LaTot
+   Inspired by backstage.com design
+   ============================================ */
+
+/* ============================================
+   CSS Reset & Base Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   Navbar Container
+   ============================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #060b0d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;

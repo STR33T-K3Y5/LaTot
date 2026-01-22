@@ -41,20 +41,6 @@ const Navbar = () => {
 
       <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link
-          to="/findtalent"
-          className={location.pathname === '/findtalent' ? 'active' : ''}
-        >
-          Find Talent
-        </Link>
-        {navLinks.map((link) => (
-          <a key={link.name} href={link.to}>
-            {link.name}
-          </a>
-        ))}
-        <button className="mobile-cta">
-          <a href="mailto:info@example.com">Join</a>
-        </button>
-      </div>
 
       {/* CTA Button */}
       <button className="cta-button">

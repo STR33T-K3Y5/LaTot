@@ -422,17 +422,3 @@
   outline: none;
 }
 
-/* ============================================
-   Reduced Motion
-   ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  .navbar,
-  .nav-links,
-  .hamburger span,
-  .nav-links a,
-  .nav-links a::after,
-  .cta-button {
-    transition: none;
-  }
-}
-

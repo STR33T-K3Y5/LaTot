@@ -408,31 +408,3 @@
 
 /* ============================================
    Accessibility - Focus States
-   ============================================ */
-.hamburger:focus,
-.cta-button:focus,
-.nav-links a:focus {
-  outline: 2px solid #f6b63f;
-  outline-offset: 2px;
-}
-
-.hamburger:focus:not(:focus-visible),
-.cta-button:focus:not(:focus-visible),
-.nav-links a:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* ============================================
-   Reduced Motion
-   ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  .navbar,
-  .nav-links,
-  .hamburger span,
-  .nav-links a,
-  .nav-links a::after,
-  .cta-button {
-    transition: none;
-  }
-}
-
