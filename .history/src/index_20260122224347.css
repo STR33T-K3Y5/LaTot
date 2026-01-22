@@ -1,0 +1,249 @@
+/* ============================================
+   Smooth Scrolling for Anchor Links
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Account for fixed navbar height */
+}
+
+/* ============================================
+   HERO SECTION 
+   ============================================ */
+
+#hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 20%,
+    #2d1f3d 35%,
+    #1a1a2e 50%,
+    #2d1f3d 65%,
+    #16213e 80%,
+    #1a1a2e 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Dark crimson accent overlay */
+#hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(88, 28, 28, 0.15);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   Hero Section Fade-In Animations
+   ============================================ */
+
+/* Initial state: hidden and slightly offset */
+.hero-header,
+.hero-subheader,
+.hero-text,
+.hero-cta-btn {
+  opacity: 0;
+  transform: translateY(15px);
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+
+/* Typography - Modern Sans-serif (matching Backstage) */
+.hero-header {
+  font-family: Libre-Baskerville, serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero-subheader {
+  font-family: Reckless-Bold, serif;
+  font-size: clamp(1.95rem, 3vw, 1.75rem);
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 40px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Word Swap Animation Container */
+.word-swap-container {
+  display: inline-block;
+  position: relative;
+  height: 1.4em;
+  min-width: 180px;
+  vertical-align: bottom;
+}
+
+.word-swap-word {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  white-space: nowrap;
+  color: #c59740;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Animation keyframes for word swapping */
+.word-swap-word.word-1 {
+  animation: wordSwap 18s ease-in-out infinite;
+}
+
+.word-swap-word.word-2 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.word-swap-word.word-3 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+.word-swap-word.word-4 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 9s;
+}
+
+.word-swap-word.word-5 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 12s;
+}
+
+.word-swap-word.word-6 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 15s;
+}
+
+@keyframes wordSwap {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  14% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  17% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* CTA Button - Backstage "Post a Job" style */
+.hero-cta-btn {
+  display: inline-block;
+  background-color: #c59740;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(197, 151, 64, 0.3);
+}
+
+.hero-cta-btn:hover {
+  background-color: #b08535;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(197, 151, 64, 0.4);
+}
+
+.hero-cta-btn:active {
+  transform: translateY(0);
+}
+
+.hero-cta-btn a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero-section {
+    min-height: auto;
+    padding: 80px 20px 60px;
+    margin-top: 60px;
+  }
+
+  .hero-subheader {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .word-swap-container {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

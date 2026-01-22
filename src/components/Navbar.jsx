@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css'; 
-
+import logo from '../images/latot.webp';
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -35,9 +35,9 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
-      <h2 className="logo">
-        <Link to="/">LaTot</Link>
-      </h2>
+      <Link to="/" className="logo-link">
+        <img src={logo} className="logo" alt="LaTot logo" />
+      </Link>
 
       <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
 
       {/* CTA Button */}
-      <button className="cta-button">
+      <button className="cta-button" >
         <a href="mailto:info@latotofficial.com">Join</a>
       </button>
 

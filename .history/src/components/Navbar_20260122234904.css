@@ -1,0 +1,443 @@
+/* ============================================
+   Navbar Styles - LaTot
+   Inspired by backstage.com design
+   ============================================ */
+
+/* ============================================
+   CSS Reset & Base Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   Navbar Container
+   ============================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #060b0d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
+/* ============================================
+   Logo Styles
+   ============================================ */
+.logo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.logo a {
+  background: linear-gradient(135deg, #c59740 0%, #a87920 50%, #f6b63f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* ============================================
+   Navigation Links - Desktop
+   ============================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #f6b63f;
+}
+
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #c59740 0%, #a87920 50%, #f6b63f 100%);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #c59740 0%, #a87920 50%, #f6b63f 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================================
+   CTA Button - Desktop
+   ============================================ */
+.cta-button {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  padding: 10px 28px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 23px;
+  padding: 2px;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f5f5f5;
+  box-shadow: 0 4px 15px rgba(246, 182, 63, 0.3);
+  transform: translateY(-1px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.cta-button a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+}
+
+.cta-button a:hover {
+    color: #f6b63f;
+    text-decoration: none;
+    display: block;
+}
+
+/* ============================================
+   Hamburger Menu Icon
+   ============================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  transform-origin: left center;
+}
+
+.hamburger span:nth-child(2) {
+  transform-origin: left center;
+  width: 80%;
+}
+
+.hamburger span:nth-child(3) {
+  transform-origin: left center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  width: 100%;
+  position: relative;
+  top: -1px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 100%;
+  position: relative;
+  top: 1px;
+}
+
+/* ============================================
+   Mobile Styles (1024px and below)
+   ============================================ */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+    order: 3;
+  }
+
+  .cta-button {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #060b0d;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 30px 30px;
+    gap: 0;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:hover {
+    color: #f6b63f;
+    padding-left: 10px;
+    transition: padding-left 0.2s ease, color 0.2s ease;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  /* Mobile CTA Button */
+  .nav-links::after {
+    content: '';
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+    right: 30px;
+  }
+
+  .nav-links .mobile-cta {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding: 14px 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links .mobile-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 23px;
+    padding: 2px;
+    background: linear-gradient(135deg, #c59740 0%, #a87920 50%, #f6b63f 100%);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .nav-links .mobile-cta:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 15px rgba(246, 182, 63, 0.3);
+  }
+
+  .nav-links .mobile-cta a {
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    display: inline;
+  }
+
+  .nav-links .mobile-cta a:hover {
+    padding-left: 0;
+  }
+}
+
+/* ============================================
+   Mobile CTA - Hidden by default
+   ============================================ */
+.mobile-cta {
+  display: none;
+}
+
+/* ============================================
+   Overlay for Mobile Menu
+   ============================================ */
+@media (max-width: 1024px) {
+  .nav-links::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+
+  .nav-links.open::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================
+   Smaller Mobile Devices
+   ============================================ */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  .logo {
+    width: 10px;
+    height: 10px
+  }
+
+  .nav-links {
+    width: 100%;
+    right: -100%;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+}
+
+/* ============================================
+   Accessibility - Focus States
+   ============================================ */
+.hamburger:focus,
+.cta-button:focus,
+.nav-links a:focus {
+  outline: 2px solid #f6b63f;
+  outline-offset: 2px;
+}
+
+.hamburger:focus:not(:focus-visible),
+.cta-button:focus:not(:focus-visible),
+.nav-links a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .nav-links,
+  .hamburger span,
+  .nav-links a,
+  .nav-links a::after,
+  .cta-button {
+    transition: none;
+  }
+}
+
