@@ -35,7 +35,7 @@
 
 /* Typography - Modern Sans-serif (matching Backstage) */
 .hero-header {
-  font-family: Libre-Baskerville, serif;
+  font-family: Ge, sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
   color: #ffffff;
@@ -182,7 +182,6 @@
   #hero-section {
     min-height: auto;
     padding: 80px 20px 60px;
-    margin-top: 60px;
   }
 
   .hero-subheader {

@@ -35,7 +35,7 @@
 
 /* Typography - Modern Sans-serif (matching Backstage) */
 .hero-header {
-  font-family: Libre-Baskerville, serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
   color: #ffffff;
@@ -45,8 +45,8 @@
 }
 
 .hero-subheader {
-  font-family: Reckless-Bold, serif;
-  font-size: clamp(1.95rem, 3vw, 1.75rem);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 24px 0;
@@ -138,66 +138,3 @@
     opacity: 0;
     transform: translate(-50%, -20px);
   }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, 0);
-  }
-}
-
-/* CTA Button - Backstage "Post a Job" style */
-.hero-cta-btn {
-  display: inline-block;
-  background-color: #c59740;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 14px 32px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(197, 151, 64, 0.3);
-}
-
-.hero-cta-btn:hover {
-  background-color: #b08535;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(197, 151, 64, 0.4);
-}
-
-.hero-cta-btn:active {
-  transform: translateY(0);
-}
-
-.hero-cta-btn a {
-  color: #ffffff;
-  text-decoration: none;
-  display: block;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #hero-section {
-    min-height: auto;
-    padding: 80px 20px 60px;
-    margin-top: 60px;
-  }
-
-  .hero-subheader {
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .word-swap-container {
-    min-width: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-cta-btn {
-    width: 100%;
-    max-width: 300px;
-  }
-}

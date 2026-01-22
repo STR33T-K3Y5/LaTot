@@ -27,10 +27,6 @@ const Home = () => {
             and passion converge with endless opportunities across the multiverse.
           </p>
           <button className="hero-cta-btn">
-            <a href="mailto:info@latotofficial.com">Join Now</a>
-          </button>
-        </div>
-      </section>
       
       {/* About Section */}
       <section id="about-section">

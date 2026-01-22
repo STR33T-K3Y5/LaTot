@@ -1,0 +1,189 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Lobster&family=Oswald:wght@300;400;500;700&family=Rajdhani:wght@300;400;500;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+#hero-section {
+  background-color: #130ef0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Header - H1 with Typing Effect */
+.hero-header {
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+/* Typing Effect Keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Apply typing effect to hero header */
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: 
+    typing 3s ease-in-out forwards,
+    blink 0.7s step-end infinite;
+  animation-delay: 0s, 3s;
+}
+
+/* Hero Subheader - H2 */
+.hero-subheader {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+/* Word Swap Container */
+.word-swap-container {
+  display: inline-block;
+  position: relative;
+  min-width: 180px;
+  vertical-align: bottom;
+}
+
+.word-swap-word {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: #c59740;
+  display: inline-block;
+  animation: wordSwap 5s infinite;
+}
+
+/* Word Swap Animation */
+@keyframes wordSwap {
+  0%, 20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25%, 100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Multiple words with staggered animations */
+.word-swap-word {
+  animation: wordSwap 5s infinite;
+}
+
+.word-swap-word:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.word-swap-word:nth-child(2) {
+  animation: wordSwap 5s infinite;
+  animation-delay: 1s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.word-swap-word:nth-child(3) {
+  animation: wordSwap 5s infinite;
+  animation-delay: 2s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.word-swap-word:nth-child(4) {
+  animation: wordSwap 5s infinite;
+  animation-delay: 3s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.word-swap-word:nth-child(5) {
+  animation: wordSwap 5s infinite;
+  animation-delay: 4s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Alternative word swap using pseudo-elements for smoother transitions */
+.word-swap-container {
+  position: relative;
+  display: inline-block;
+  height: 1.2em;
+  min-width: 200px;
+}
+
+.word-swap-container::after {
+  content: 'Opportunity';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: #c59740;
+  animation: wordFade 5s infinite;
+}
+
+@keyframes wordFade {
+  0%, 20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25%, 100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Multiple word animation with keyframes */
+.word-swap-container.opportunity::after {
+  content: 'Opportunity';

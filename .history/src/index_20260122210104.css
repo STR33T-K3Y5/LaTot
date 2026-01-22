@@ -1,0 +1,19 @@
+/* ============================================
+   HERO SECTION - Backstage.com Style
+   ============================================ */
+
+#hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark crimson accent overlay */
+#hero-section::before {
+  content: '';
+  position: absolute;

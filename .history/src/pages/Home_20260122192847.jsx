@@ -7,30 +7,6 @@ const Home = () => {
   return (
     <>
     <main className="body">
-      {/* Hero Section */}
-      <section id="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-header">Welcome To LaTot</h1>
-          <h2 className="hero-subheader">
-            Where Talent Meets{" "}
-            <span className="word-swap-container">
-              <span className="word-swap-word word-1">Opportunity</span>
-              <span className="word-swap-word word-2">Purpose</span>
-              <span className="word-swap-word word-3">Growth</span>
-              <span className="word-swap-word word-4">Impact</span>
-              <span className="word-swap-word word-5">Innovation</span>
-              <span className="word-swap-word word-6">Possibility</span>
-            </span>
-          </h2>
-          <p className="hero-text">
-            Discover a universe of possibilities where your skills, creativity,
-            and passion converge with endless opportunities across the multiverse.
-          </p>
-          <button className="hero-cta-btn">
-            <a href="mailto:info@latotofficial.com">Join Now</a>
-          </button>
-        </div>
-      </section>
       
       {/* About Section */}
       <section id="about-section">

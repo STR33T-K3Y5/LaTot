@@ -17,20 +17,6 @@ const Home = () => {
               <span className="word-swap-word word-1">Opportunity</span>
               <span className="word-swap-word word-2">Purpose</span>
               <span className="word-swap-word word-3">Growth</span>
-              <span className="word-swap-word word-4">Impact</span>
-              <span className="word-swap-word word-5">Innovation</span>
-              <span className="word-swap-word word-6">Possibility</span>
-            </span>
-          </h2>
-          <p className="hero-text">
-            Discover a universe of possibilities where your skills, creativity,
-            and passion converge with endless opportunities across the multiverse.
-          </p>
-          <button className="hero-cta-btn">
-            <a href="mailto:info@latotofficial.com">Join Now</a>
-          </button>
-        </div>
-      </section>
       
       {/* About Section */}
       <section id="about-section">
