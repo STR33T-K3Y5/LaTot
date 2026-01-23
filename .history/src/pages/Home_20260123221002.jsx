@@ -80,70 +80,6 @@ const Home = () => {
 
   const aboutTotalSlides = aboutItems.length;
 
-  // Core Industries Carousel Data
-  const coreIndustries = [
-    {
-      id: 'technology',
-      mobileImg: MobileTech,
-      desktopImg: DesktopTech,
-      title: 'Technology',
-    },
-    {
-      id: 'creative-arts',
-      mobileImg: MobileArts,
-      desktopImg: DesktopArts,
-      title: 'Creative Arts',
-    },
-    {
-      id: 'finance',
-      mobileImg: MobileFinance,
-      desktopImg: DesktopFinance,
-      title: 'Finance',
-    },
-    {
-      id: 'healthcare',
-      mobileImg: MobileHealth,
-      desktopImg: DesktopHealth,
-      title: 'HealthCare',
-    },
-    {
-      id: 'education',
-      mobileImg: MobileEducation,
-      desktopImg: DesktopEducation,
-      title: 'Education',
-    },
-    {
-      id: 'entertainment',
-      mobileImg: MobileEntertainment,
-      desktopImg: DesktopEntertainment,
-      title: 'Entertainment',
-    },
-    {
-      id: 'sustainability',
-      mobileImg: MobileSustainability,
-      desktopImg: DesktopSustainability,
-      title: 'Sustainability',
-    },
-    {
-      id: 'retail',
-      mobileImg: MobileRetail,
-      desktopImg: DesktopRetail,
-      title: 'Retail',
-    },
-    {
-      id: 'manufacturing',
-      mobileImg: MobileManufacturing,
-      desktopImg: DesktopManufacturing,
-      title: 'Manufacturing',
-    },
-    {
-      id: 'consulting',
-      mobileImg: MobileConsulting,
-      desktopImg: DesktopConsulting,
-      title: 'Consulting',
-    }
-  ];
-
   // About navigation handlers - SIMPLIFIED
   const nextAboutSlide = () => {
     setAboutCurrentIndex((prev) => (prev + 1) % aboutTotalSlides);
@@ -199,7 +135,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero-section">
         <div className="hero-content">
-          <h1 className="hero-header">Welcome To <span className='header-gradient'>ToLaTot</span></h1>
+          <h1 className="hero-header">Welcome To ToLaTot</h1>
           <h2 className="hero-subheader">
             Where Talent Meets{" "} 
             <span className="word-swap-container">
@@ -302,57 +238,63 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Core Industries Section - Infinite Scroll Carousel */}
+      {/* Core Industries Section */}
       <section id="core-section">
-        <h1 className="core-header">Featured <span className="header-gradient">Industries</span> We Cater For</h1>
+        <h1 className="core-header">Our <span className="about-header-gradient">Core</span> Industries</h1>
         <h2 className="core-subheader">How LaTot Works For You</h2>
-        
-        {/* Carousel Container with Edge Blur */}
-        <div className="core-carousel-wrapper">
-          {/* Left Edge Blur */}
-          <div className="core-carousel-blur core-carousel-blur-left"></div>
-          
-          {/* Infinite Scrolling Track */}
-          <div className="core-carousel">
-            {/* First set of items */}
-            {coreIndustries.map((item) => (
-              <div key={item.id} className="core-item">
-                <div className="core-item-image">
-                  <picture>
-                    <source media="(min-width: 768px)" srcSet={item.desktopImg} />
-                    <img src={item.mobileImg} alt={item.title} />
-                  </picture>
-                  <div className="core-item-overlay"></div>
-                </div>
-                <div className="core-item-content">
-                  <h1 className="core-item-title">{item.title}</h1>
-                  <p className="core-item-description">{item.description}</p>
-                </div>
-              </div>
-            ))}
-            
-            {/* Duplicate set for seamless infinite scroll */}
-            {coreIndustries.map((item) => (
-              <div key={`${item.id}-duplicate`} className="core-item">
-                <div className="core-item-image">
-                  <picture>
-                    <source media="(min-width: 768px)" srcSet={item.desktopImg} />
-                    <img src={item.mobileImg} alt={item.title} />
-                  </picture>
-                  <div className="core-item-overlay"></div>
-                </div>
-                <div className="core-item-content">
-                  <h1 className="core-item-title">{item.title}</h1>
-                  <p className="core-item-description">{item.description}</p>
-                </div>
-              </div>
-            ))}
+        <div className="core-carousel" alt="Core Industries Wrapper">
+          {/* Technology */}
+          <div className="core-item" alt="Technology Container">
+            <h1 className="core-header">Technology</h1>
+            <p className="core-description">Cutting-edge innovation in software, hardware, AI, and digital transformation solutions.</p>
           </div>
-          
-          {/* Right Edge Blur */}
-          <div className="core-carousel-blur core-carousel-blur-right"></div>
+          {/* Creative Arts */}
+          <div className="core-item" alt="Creative Arts Container">
+            <h1 className="core-header">Creative Arts</h1>
+            <p className="core-description">Design, visual arts, music, and creative expression across all digital and traditional mediums.</p>
+          </div>
+          {/* Finance */}
+          <div className="core-item" alt="Finance Container">
+            <h1 className="core-header">Finance</h1>
+            <p className="core-description">Rise to prominence in your chosen domain. The palace represents the pinnacle of achievement—where your talents are recognized, rewarded, and celebrated. Build your legacy in the heart of the LATOT multiverse.</p>
+          </div>
+          {/* HealthCare */}
+          <div className="core-item" alt="HealthCare Container">
+            <h1 className="core-header">HealthCare</h1>
+            <p className="core-description">Medical innovation, telemedicine, wellness, and life sciences advancing human health.</p>
+          </div>
+          {/* Education */}
+          <div className="core-item">
+            <h1 className="core-header" alt="Education Container">Education</h1>
+            <p className="core-description">Learning technologies, personalized education, and skills development for the future.</p>
+          </div>
+          {/* Entertainment */}
+          <div className="core-item">
+            <h1 className="core-header" alt="Entertainment Container">Entertainment</h1>
+            <p className="core-description">Gaming, streaming, content creation, and immersive entertainment experiences.</p>
+          </div>
+          {/* Sustainability */}
+          <div className="core-item">
+            <h1 className="core-header" alt="Sustainability Container">Sustainability</h1>
+            <p className="core-description">Green technology, renewable energy, and environmental solutions for a better planet.</p>
+          </div>
+          {/* Retail */}
+          <div className="core-item">
+            <h1 className="core-header" alt="Retail Container">Retail</h1>
+            <p className="core-description">E-commerce, omnichannel experiences, and the future of consumer commerce.</p>
+          </div>
+          {/* Manufacturing */}
+          <div className="core-item">
+            <h1 className="core-header" alt="Manufacturing Container">Manufacturing</h1>
+            <p className="core-description">Smart manufacturing, automation, and advanced production technologies.</p>
+          </div>
+          {/* Consulting */}
+          <div className="core-item">
+            <h1 className="core-header" alt="Consulting Container">Consulting</h1>
+            <p className="core-description">Strategic advice, business transformation, and expert guidance across industries.</p>
+          </div>
         </div>
-      </section>
+      </section> 
 
       {/* Talent Planets Section */}
       <section id="planet-section">

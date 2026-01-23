@@ -296,7 +296,7 @@ html {
   background-position: 0% center;
 }
 
-.header-gradient {
+.aheader-gradient {
   background: linear-gradient(90deg, #c59740 0%, #c99637 25%, #a87920 50%, #ba831e 75%, #f6b63f 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;

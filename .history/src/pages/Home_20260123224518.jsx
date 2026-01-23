@@ -199,7 +199,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero-section">
         <div className="hero-content">
-          <h1 className="hero-header">Welcome To <span className='header-gradient'>ToLaTot</span></h1>
+          <h1 className="hero-header">Welcome To ToLaTot</h1>
           <h2 className="hero-subheader">
             Where Talent Meets{" "} 
             <span className="word-swap-container">
@@ -304,7 +304,7 @@ const Home = () => {
 
       {/* Core Industries Section - Infinite Scroll Carousel */}
       <section id="core-section">
-        <h1 className="core-header">Featured <span className="header-gradient">Industries</span> We Cater For</h1>
+        <h1 className="core-header">Core <span className="aboutheader-gradient">Industires</span> Industries</h1>
         <h2 className="core-subheader">How LaTot Works For You</h2>
         
         {/* Carousel Container with Edge Blur */}

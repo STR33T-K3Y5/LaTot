@@ -111,36 +111,42 @@ const Home = () => {
       mobileImg: MobileEducation,
       desktopImg: DesktopEducation,
       title: 'Education',
+
     },
     {
       id: 'entertainment',
       mobileImg: MobileEntertainment,
       desktopImg: DesktopEntertainment,
       title: 'Entertainment',
+
     },
     {
       id: 'sustainability',
       mobileImg: MobileSustainability,
       desktopImg: DesktopSustainability,
       title: 'Sustainability',
+
     },
     {
       id: 'retail',
       mobileImg: MobileRetail,
       desktopImg: DesktopRetail,
       title: 'Retail',
+
     },
     {
       id: 'manufacturing',
       mobileImg: MobileManufacturing,
       desktopImg: DesktopManufacturing,
       title: 'Manufacturing',
+
     },
     {
       id: 'consulting',
       mobileImg: MobileConsulting,
       desktopImg: DesktopConsulting,
       title: 'Consulting',
+
     }
   ];
 
@@ -199,7 +205,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero-section">
         <div className="hero-content">
-          <h1 className="hero-header">Welcome To <span className='header-gradient'>ToLaTot</span></h1>
+          <h1 className="hero-header">Welcome To ToLaTot</h1>
           <h2 className="hero-subheader">
             Where Talent Meets{" "} 
             <span className="word-swap-container">
@@ -304,7 +310,7 @@ const Home = () => {
 
       {/* Core Industries Section - Infinite Scroll Carousel */}
       <section id="core-section">
-        <h1 className="core-header">Featured <span className="header-gradient">Industries</span> We Cater For</h1>
+        <h1 className="core-header">Our <span className="about-header-gradient">Core</span> Industries</h1>
         <h2 className="core-subheader">How LaTot Works For You</h2>
         
         {/* Carousel Container with Edge Blur */}

@@ -296,18 +296,6 @@ html {
   background-position: 0% center;
 }
 
-.header-gradient {
-  background: linear-gradient(90deg, #c59740 0%, #c99637 25%, #a87920 50%, #ba831e 75%, #f6b63f 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  display: inline;
-  animation: gradientMove 8s ease infinite;
-  background-position: 0% center;
-}
-
 @keyframes gradientMove {
   0%, 100% {
     background-position: 0% center;
@@ -958,64 +946,4 @@ html {
 
   #core-section .core-subheader {
     font-size: 0.9rem;
-    padding: 0 12px;
-    margin-bottom: 32px;
-  }
-
-  .core-carousel-blur {
-    width: 60px;
-  }
-
-  .core-carousel {
-    gap: 12px;
-    padding: 0 12px;
-    animation-duration: 35s;
-  }
-
-  .core-item {
-    flex: 0 0 260px;
-    width: 260px;
-  }
-
-  .core-item-content {
-    padding: 16px;
-    min-height: 180px;
-  }
-
-  .core-item-title {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-  .core-item-description {
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-}
-
-/* ============================================
-   ACCESSIBILITY: Reduced Motion
-   ============================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  .core-carousel {
-    animation: none;
-  }
-
-  .core-item {
-    transition: none;
-  }
-
-  .core-item:hover {
-    transform: none;
-  }
-
-  .core-item-image img {
-    transition: none;
-  }
-
-  .core-item:hover .core-item-image img {
-    transform: none;
-  }
-}
 

@@ -199,7 +199,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero-section">
         <div className="hero-content">
-          <h1 className="hero-header">Welcome To <span className='header-gradient'>ToLaTot</span></h1>
+          <h1 className="hero-header">Welcome To <span className='heade'ToLaTot</h1>
           <h2 className="hero-subheader">
             Where Talent Meets{" "} 
             <span className="word-swap-container">

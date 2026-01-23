@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Navbar from "../components/Navbar";
 import HeaderImage from "../images/header.webp"
 import "../index.css"
@@ -87,60 +87,70 @@ const Home = () => {
       mobileImg: MobileTech,
       desktopImg: DesktopTech,
       title: 'Technology',
+      description: 'Cutting-edge innovation in software, hardware, AI, and digital transformation solutions.'
     },
     {
       id: 'creative-arts',
       mobileImg: MobileArts,
       desktopImg: DesktopArts,
       title: 'Creative Arts',
+      description: 'Design, visual arts, music, and creative expression across all digital and traditional mediums.'
     },
     {
       id: 'finance',
       mobileImg: MobileFinance,
       desktopImg: DesktopFinance,
       title: 'Finance',
+      description: 'Rise to prominence in your chosen domain. The palace represents the pinnacle of achievement—where your talents are recognized, rewarded, and celebrated.'
     },
     {
       id: 'healthcare',
       mobileImg: MobileHealth,
       desktopImg: DesktopHealth,
       title: 'HealthCare',
+      description: 'Medical innovation, telemedicine, wellness, and life sciences advancing human health.'
     },
     {
       id: 'education',
       mobileImg: MobileEducation,
       desktopImg: DesktopEducation,
       title: 'Education',
+      description: 'Learning technologies, personalized education, and skills development for the future.'
     },
     {
       id: 'entertainment',
       mobileImg: MobileEntertainment,
       desktopImg: DesktopEntertainment,
       title: 'Entertainment',
+      description: 'Gaming, streaming, content creation, and immersive entertainment experiences.'
     },
     {
       id: 'sustainability',
       mobileImg: MobileSustainability,
       desktopImg: DesktopSustainability,
       title: 'Sustainability',
+      description: 'Green technology, renewable energy, and environmental solutions for a better planet.'
     },
     {
       id: 'retail',
       mobileImg: MobileRetail,
       desktopImg: DesktopRetail,
       title: 'Retail',
+      description: 'E-commerce, omnichannel experiences, and the future of consumer commerce.'
     },
     {
       id: 'manufacturing',
       mobileImg: MobileManufacturing,
       desktopImg: DesktopManufacturing,
       title: 'Manufacturing',
+      description: 'Smart manufacturing, automation, and advanced production technologies.'
     },
     {
       id: 'consulting',
       mobileImg: MobileConsulting,
       desktopImg: DesktopConsulting,
       title: 'Consulting',
+      description: 'Strategic advice, business transformation, and expert guidance across industries.'
     }
   ];
 
@@ -199,7 +209,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero-section">
         <div className="hero-content">
-          <h1 className="hero-header">Welcome To <span className='header-gradient'>ToLaTot</span></h1>
+          <h1 className="hero-header">Welcome To ToLaTot</h1>
           <h2 className="hero-subheader">
             Where Talent Meets{" "} 
             <span className="word-swap-container">
@@ -304,7 +314,7 @@ const Home = () => {
 
       {/* Core Industries Section - Infinite Scroll Carousel */}
       <section id="core-section">
-        <h1 className="core-header">Featured <span className="header-gradient">Industries</span> We Cater For</h1>
+        <h1 className="core-header">Our <span className="about-header-gradient">Core</span> Industries</h1>
         <h2 className="core-subheader">How LaTot Works For You</h2>
         
         {/* Carousel Container with Edge Blur */}
