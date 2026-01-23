@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+/* rest of your css */
+
+/* ============================================
+   Smooth Scrolling for Anchor Links
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+/* ============================================
+   HERO SECTION - Enhanced with Fade In Animation
+   ============================================ */
+
+#hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 400% 400%;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #060b0d;
+  pointer-events: none;
+}
+
+/* Hero Content Fade In Animation */
+#hero-section .hero-content {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: heroFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animations for hero elements */
+#hero-section .hero-header {
+  font-family: "Rubik Distressed", system-ui;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  animation: heroFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#hero-section .hero-subheader {
+  font-family: "Fascinate", system-ui;
+  font-size: clamp(1.95rem, 3vw, 1.75rem);
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  animation: heroFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#hero-section .hero-text {
+  font-family: "UnifrakturCook", cursive;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 40px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: heroFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+
+/* CTA Button - Backstage "Post a Job" style */
+.hero-cta-btn {
+  display: inline-block;
+  background-color: #c59740;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 20px rgba(197, 151, 64, 0.3);
+  animation: heroFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-cta-btn:hover {
+  background-color: #d4a74a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(197, 151, 64, 0.5);
+}
+
+.hero-cta-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(197, 151, 64, 0.4);
+}
+
+.hero-cta-btn a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+/* Word Swap Animation Container */
+.word-swap-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1.4em;
+  margin-top: 4px;
+}
+
+.word-swap-word {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  white-space: nowrap;
+  color: #c59740;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Animation keyframes for word swapping */
+.word-swap-word.word-1 {
+  animation: wordSwap 18s ease-in-out infinite;
+}
+
+.word-swap-word.word-2 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.word-swap-word.word-3 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+.word-swap-word.word-4 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 9s;
+}
+
+.word-swap-word.word-5 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 12s;
+}
+
+.word-swap-word.word-6 {
+  animation: wordSwap 18s ease-in-out infinite;
+  animation-delay: 15s;
+}
+
+@keyframes wordSwap {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  14% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  17% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero-section {
+    min-height: auto;
+    padding: 80px 20px 60px;
+    margin-top: 60px;
+  }
+
+  #hero-section .hero-subheader {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .word-swap-container {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ============================================
+   ABOUT SECTION - Track-Based Carousel (Backstage.com style)
+   ============================================ */
+
+#about-section {
+  background-color: #060b0d;
+  padding: 100px 24px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Section Header Typography */
+#about-section .about-header {
+  font-family: "Metal Mania", system-ui;
+  font-size: clamp(1.95rem, 4vw, 5rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+#about-section .about-header-gradient {
+  background: linear-gradient(90deg, #c59740 0%, #c99637 25%, #a87920 50%, #ba831e 75%, #f6b63f 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  display: inline;
+  animation: gradientMove 8s ease infinite;
+  background-position: 0% center;
+}
+
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+#about-section .about-subheader {
+  font-family: 'Matter-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 60px 0;
+  line-height: 1.4;
+}
+
+/* ============================================
+   TRACK-BASED CAROUSEL STRUCTURE
+   ============================================ */
+
+/* Carousel Wrapper */
+.about-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+/* Carousel Viewport - overflow hidden, defines visible area */
+.about-carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Carousel Track - continuous flex container, moves via transform */
+.about-carousel-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+/* Individual Slide - each slide takes full viewport width */
+.about-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #060b0d;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow:
+    0 8px 24px rgba(255, 255, 255, 0.06),
+    0 24px 60px rgba(0, 0, 0, 0.6);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Active slide enhancement */
+.about-slide.is-active {
+  box-shadow:
+    0 12px 32px rgba(255, 255, 255, 0.08),
+    0 32px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* Slide Image */
+.about-slide picture {
+  width: 100%;
+  max-width: 600px;
+  height:a
+  display: block;
+}
+
+.about-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Slide Content Container */
+.about-slide-content {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Slide Typography */
+.about-slide-title {
+  font-family: 'Reckless-Bold', 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 24px 0 12px 0;
+  line-height: 1.2;
+}
+
+.about-slide-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   NAVIGATION ARROWS
+   ============================================ */
+
+.about-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+.about-carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.about-carousel-arrow:focus {
+  outline: 2px solid #c59740;
+  outline-offset: 3px;
+}
+
+.about-carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.about-carousel-arrow-left {
+  left: 20px;
+}
+
+.about-carousel-arrow-right {
+  right: 20px;
+}
+
+.about-carousel-arrow svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* ============================================
+   CAROUSEL INDICATORS
+   ============================================ */
+
+.about-carousel-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.about-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.about-indicator.active {
+  background-color: #c59740;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(197, 151, 64, 0.5);
+}
+
+.about-indicator:focus {
+  outline: 2px solid #c59740;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   ACCESSIBILITY: Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-carousel-track {
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Desktop Large - Peek effect visible */
+@media (max-width: 1400px) {
+  .about-carousel-arrow {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #about-section {
+    padding: 80px 20px;
+  }
+
+  .about-carousel-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-carousel-arrow-left {
+    left: 10px;
+  }
+
+  .about-carousel-arrow-right {
+    right: 10px;
+  }
+}
+
+/* Mobile - Only one slide visible */
+@media (max-width: 768px) {
+  #about-section {
+    padding: 60px 16px;
+  }
+
+  .about-slide {
+    padding: 0 50px;
+  }
+
+  .about-slide-title {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0;
+  }
+
+  .about-slide-description {
+    font-size: 0.95rem;
+  }
+
+  .about-carousel-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .about-carousel-arrow-left {
+    left: 5px;
+  }
+
+  .about-carousel-arrow-right {
+    right: 5px;
+  }
+
+  .about-carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .about-carousel-indicators {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  #about-section {
+    padding: 50px 12px;
+  }
+
+  #about-section .about-header {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  #about-section .about-subheader {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+
+  .about-slide {
+    padding: 0 44px;
+  }
+
+  .about-slide-title {
+    font-size: 1.35rem;
+    margin: 16px 0 8px 0;
+  }
+
+  .about-slide-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .about-carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-carousel-arrow-left {
+    left: 0;
+  }
+
+  .about-carousel-arrow-right {
+    right: 0;
+  }
+
+  .about-carousel-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-carousel-indicators {
+    margin-top: 25px;
+    gap: 10px;
+  }
+}
+
