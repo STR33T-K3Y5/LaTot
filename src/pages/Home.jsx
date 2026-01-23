@@ -1,7 +1,50 @@
 import Navbar from "../components/Navbar";
 import HeaderImage from "../images/header.webp"
 import "../index.css"
-
+import MobileHeadshot from "../images/mobile/m-headshot.webp"
+import DesktopHeadshot from "../images/desktop/d-headshot.webp"
+import MobilePlanet from "../images/mobile/m-planet.webp"
+import DesktopPlanet from "../images/desktop/d-planet.webp"
+import MobilePalace from "../images/mobile/m-palace.webp"
+import DesktopPalace from "../images/desktop/d-palace.webp"
+import MobileTech from "../images/mobile/m-tech.webp"
+import DesktopTech from "../images/desktop/d-tech.webp"
+import MobileArts from "../images/mobile/m-arts.webp"
+import DesktopArts from "../images/desktop/d-arts.webp"
+import MobileFinance from "../images/mobile/m-finance.webp"
+import DesktopFinance from "../images/desktop/d-finance.webp"
+import MobileHealth from "../images/mobile/m-health.webp"
+import DesktopHealth from "../images/desktop/d-health.webp"
+import MobileEducation from "../images/mobile/m-education.webp"
+import DesktopEducation from "../images/desktop/d-education.webp"
+import MobileEntertainment from "../images/mobile/m-entertainment.webp"
+import DesktopEntertainment from "../images/desktop/d-entertainment.webp"
+import MobileSustainability from "../images/mobile/m-sustainability.webp"
+import DesktopSustainability from "../images/desktop/d-sustainability.webp"
+import MobileRetail from "../images/mobile/m-retail.webp"
+import DesktopRetail from "../images/desktop/d-retail.webp"
+import MobileManufacturing from "../images/mobile/m-manufacturing.webp"
+import DesktopManufacturing from "../images/desktop/d-manufacturing.webp"
+import MobileConsulting from "../images/mobile/m-consulting.webp"
+import DesktopConsulting from "../images/desktop/d-consulting.webp"
+import MobileHub from "../images/mobile/m-hub.webp"
+import DesktopHub from "../images/desktop/d-hub.webp"
+import MobileNexus from "../images/mobile/m-nexus.webp"
+import DesktopNexus from "../images/desktop/d-nexus.webp"
+import MobileAcademy from "../images/mobile/m-academy.webp"
+import DesktopAcademy from "../images/desktop/d-academy.webp"
+import MobileHeadshotLevel from "../images/mobile/m-headshot-level.webp"
+import DesktopHeadshotLevel from "../images/desktop/d-headshot-level.webp"
+import MobilePlanetLevel from "../images/mobile/m-planet-level.webp"
+import DesktopPlanetLevel from "../images/desktop/d-planet-level.webp"
+import MobilePalaceLevel from "../images/mobile/m-palace-level.webp"
+import DesktopPalaceLevel from "../images/desktop/d-palace-level.webp"
+import MobileWorlds from "../images/mobile/m-worlds.webp"
+import DesktopWorlds from "../images/desktop/d-worlds.webp"
+import MobileUniverse from "../images/mobile/m-universe.webp"
+import DesktopUniverse from "../images/desktop/d-universe.webp"
+import MobileCollaboration from "../images/mobile/m-collaboration.webp"
+import DesktopCollaboration from "../images/desktop/d-collaboration.webp"
 
 const Home = () => {
   return (
@@ -39,16 +82,28 @@ const Home = () => {
         <div className="about-carousel">
           {/* Headshot */}
           <div className="about-item">
+            <picture>
+              <source media="(min-width: 768px)" srcSet={DesktopHeadshot} />
+              <img src={MobileHeadshot} alt="Responsive example" />
+            </picture>
             <h1 className="about-header">Headshot</h1>
             <p className="about-description">In the LATOT multiverse, your professional identity is your passport. A compelling headshot is more than a photograph—it's your introduction to a universe of opportunities. Showcase your authentic self and stand out among the stars.</p>
           </div>
           {/* Planet */}
           <div className="about-item">
+            <picture>
+              <source media="(min-width: 768px)" srcSet={DesktopPlanet} />
+              <img src={MobilePlanet} alt="Responsive example" />
+            </picture>
             <h1 className="about-header">Planet</h1>
             <p className="about-description">Every talent has its habitat. Find the perfect environment where your skills can flourish. From digital metropolises to creative sanctuaries, LATOT connects you with worlds designed for your unique abilities.</p>
           </div>
           {/* Palace */}
           <div className="about-item">
+            <picture>
+              <source media="(min-width: 768px)" srcSet={DesktopPalace} />
+              <img src={MobilePalace} alt="Responsive example" />
+            </picture>
             <h1 className="about-header">Palace</h1>
             <p className="about-description">Rise to prominence in your chosen domain. The palace represents the pinnacle of achievement—where your talents are recognized, rewarded, and celebrated. Build your legacy in the heart of the LATOT multiverse.</p>
           </div>
