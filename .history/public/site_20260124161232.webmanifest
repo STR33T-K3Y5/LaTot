@@ -1,0 +1,22 @@
+{
+  "name": "LaTot",
+  "short_name": "LaTot",
+  "description": "Where boundaries dissolve and possibilities expand across interconnected worlds.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060b0d",
+  "theme_color": "#c59740",
+  "icons": [
+    {
+      "src": "../src/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/android-chrome-12x12.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
