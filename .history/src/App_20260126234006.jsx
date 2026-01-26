@@ -12,10 +12,3 @@ export default function App() {
       {/* It automatically scrolls to top on every route change */}
       <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/findtalent" element={<FindTalent />} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
