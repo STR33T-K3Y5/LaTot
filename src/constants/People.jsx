@@ -2,6 +2,8 @@ import MduThumbnail from "../images/MduThumbnail.webp"
 import MduModal from "../images/MduModal.webp"
 import EthanThumbnail from "../images/EthanThumbnail.webp"
 import EthanModal from "../images/EthanModal.webp"
+import RileyThumbnail from "../images/RileyThumbnail.webp"
+import RileyModal from "../images/RileyModal.webp"
 
 export const people = [
   {
@@ -35,6 +37,22 @@ export const people = [
     personalSite: "https://www.ethandevofficial.com/",
     availableForHire: true,
     yearsexperience: 1
+  },
+  {
+    id: 3,
+    imgThumb: RileyThumbnail,
+    imgModal: RileyModal,
+    name: "Riley Ruswa",
+    location: "East Lansing, USA",
+    professions: ["High School Student"],
+    shortBio: "A high school student at East Lansing High School (Graduating 2028) with emerging interests in construction, architecture, skilled trades, and cybersecurity.",
+    socialLinks: {
+      instagram: "#",
+      linkedin: "#"
+    },
+    personalSite: "https://www.rileyruswa.com/",
+    availableForHire: false,
+    yearsexperience: 0
   }
 ];
 
